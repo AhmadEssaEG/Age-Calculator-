@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font [Poppins (400i , 700 , 800i)] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css Files  -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Icon  -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="inputs">
+          <!-- Day -->
+          <div class="input-data">
+            <div class="label valid-input-label">Day</div>
+            <input
+              type="text"
+              id="day-input"
+              class="input-field valid-input-data"
+              placeholder="DD"
+            />
+          </div>
+          <!-- Month -->
+          <div class="input-data">
+            <div class="label valid-input-label">Month</div>
+            <input
+              type="text"
+              id="month-input"
+              class="input-field valid-input-data"
+              placeholder="MM"
+            />
+          </div>
+          <!-- Year -->
+          <div class="input-data">
+            <div class="label valid-input-label">Year</div>
+            <input
+              type="text"
+              id="year-input"
+              class="input-field valid-input-data"
+              placeholder="YYyy"
+            />
+          </div>
+        </div>
+        <div class="input-wrong" id="wrong-date">
+          <ul>
+            <li>Must be valid date</li>
+          </ul>
+        </div>
+        <div class="input-wrong" id="wrong-dmy">
+          <ul>
+            <li>Must be valid day</li>
+            <li>Must be valid Month</li>
+            <li>Must be valid Year</li>
+          </ul>
+        </div>
+        <div class="input-wrong" id="required-fields">
+          <ul>
+            <li>This field is required</li>
+            <li>This field is required</li>
+            <li>This field is required</li>
+          </ul>
+        </div>
+        <!-- Break Line And Arrow Icon  -->
+        <div class="seperator">
+          <div class="seperator-icon"></div>
+          <div class="seperator-line"></div>
+        </div>
+        <!-- Result  -->
+        <secttion class="result">
+          <div class="row-result">
+            <div class="result-name text-xxl" id="year-result">--</div>
+            <div class="result-header text-xxl">years</div>
+          </div>
+          <div class="row-result">
+            <div class="result-name text-xxl" id="month-result">--</div>
+            <div class="result-header text-xxl">months</div>
+          </div>
+          <div class="row-result">
+            <div class="result-name text-xxl" id="day-result">--</div>
+            <div class="result-header text-xxl">days</div>
+          </div>
+        </secttion>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+/* Root Variabels */
+:root {
+  /* Primary  */
+  --PrimaryPurple: hsl(259, 100%, 65%);
+  --PrimaryLightRed: hsl(0, 100%, 67%);
+  /* Netural */
+  --white: #fff;
+  --ofWhite: hsl(0, 0%, 94%);
+  --lightGrey: hsl(0, 0%, 86%);
+  --smokeyGrey: hsl(0, 1%, 44%);
+  --ofBlack: hsl(0, 0%, 8%);
+}
+/* Global Style  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  font-size: 16px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--ofWhite);
+}
+.main {
+  width: 45%;
+  height: 70%;
+  background-color: var(--white);
+  border-radius: 30px;
+  border-bottom-right-radius: 150px;
+  padding: 30px 10px;
+  overflow: hidden;
+}
+/* Inputs  */
+.inputs {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputs .input-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.inputs .input-data .label {
+  font-size: 16px;
+  font-weight: 400;
+  /* color: var(--smokeyGrey); */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.inputs .input-data .input-field {
+  /* border: 1px solid var(--lightGrey); */
+  width: 90%;
+  height: 75px;
+  font-size: 32px;
+  border-radius: 10px;
+  position: relative;
+  padding-left: 20px;
+  /* display: flex; */
+}
+.inputs .input-data .input-field::placeholder {
+  font-size: 32px;
+  position: absolute;
+  top: 15%;
+  text-transform: uppercase;
+}
+.input-wrong {
+  width: 75%;
+  /* display: flex; */
+}
+.input-wrong ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-wrong ul li {
+  font-size: 14px;
+  width: 33.3%;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--PrimaryLightRed);
+  margin-top: 5px;
+}
+#wrong-date,
+#wrong-dmy,
+#required-fields {
+  display: none;
+}
+/* Seprator  */
+.seperator {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.seperator .seperator-line {
+  width: 90%;
+  height: 1px;
+  background-color: var(--lightGrey);
+  border: none;
+}
+.seperator .seperator-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("../assets/images/icon-arrow.svg") no-repeat
+    var(--PrimaryPurple) center;
+  transition: 0.1s ease-in-out;
+  position: absolute;
+  right: 0;
+}
+.seperator .seperator-icon:hover {
+  background-color: var(--ofBlack);
+  cursor: pointer;
+}
+
+/* Result Section  */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.result .row-result {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.result .result-name {
+  color: var(--PrimaryPurple);
+}
+.result .result-header {
+  margin-left: 10px;
+}
+/* Containers  */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* Utility Classes  */
+.text-xxl {
+  font-size: 90px;
+  font-weight: 800;
+  line-height: 1;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.wrong-input-label {
+  color: var(--PrimaryLightRed);
+}
+.wrong-input-data {
+  color: var(--PrimaryLightRed);
+  border: 1px solid var(--PrimaryLightRed);
+}
+.valid-input-label {
+  color: var(--smokeyGrey);
+}
+.valid-input-data {
+  color: var(--smokeyGrey);
+  border: 1px solid var(--lightGrey);
+}
+
+/* Media Queries  */
+@media only screen and (max-width: 460px) {
+  .main {
+    width: 90%;
+    height: 55%;
+    padding: 10px 10px;
+  }
+  .inputs {
+    width: 100%;
+  }
+  .inputs .label {
+    font-size: 10px !important;
+  }
+  .inputs .input-data .input-field {
+    height: 50px;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+  .inputs .input-data .input-field::placeholder {
+    font-size: 16px;
+    padding-top: 5px;
+  }
+  .seperator {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    display: block;
+  }
+  .seperator .seperator-line {
+    margin: 0 auto;
+    z-index: 0;
+  }
+  .seperator .seperator-icon {
+    position: absolute;
+    top: -25px;
+    left: 40%;
+    background-size: 20px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: -25px;
+    z-index: 1;
+  }
+  .result {
+    margin-top: 60px;
+  }
+  .text-xxl {
+    font-size: 52px;
+  }
+  .input-wrong {
+    width: 100%;
+  }
+  .input-wrong ul li {
+    font-size: 8px !important;
+  }
+}
